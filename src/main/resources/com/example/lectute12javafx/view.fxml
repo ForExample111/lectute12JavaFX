@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="370.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lectute12javafx.MyController">
+   <top>
+       <VBox prefHeight="57.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="File">
+                   <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <MenuItem mnemonicParsing="false" text="Delete" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <Button mnemonicParsing="false" onAction="#fillStudents" text="створити список" />
+           </ToolBar>
+       </VBox>
+   </top>
+   <center>
+       <AnchorPane prefHeight="236.0" prefWidth="582.0" BorderPane.alignment="CENTER">
+           <TableView fx:id="studentTable" layoutX="20.0" layoutY="20.0" prefHeight="275.0" prefWidth="265.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <columns>
+                   <TableColumn fx:id="idColumn" prefWidth="30.0" text="id" />
+                   <TableColumn fx:id="nameColumn" prefWidth="200.0" text="name" />
+                   <TableColumn fx:id="ageColumn" prefWidth="35.0" text="age" />
+               </columns>
+           </TableView>
+         <Label layoutX="305.0" layoutY="20.0" text="#" />
+         <Label layoutX="305.0" layoutY="50.0" text="name" />
+         <Label layoutX="305.0" layoutY="80.0" text="age" />
+         <TextField fx:id="idField" layoutX="350.0" layoutY="20.0" />
+         <TextField fx:id="nameField" layoutX="350.0" layoutY="50.0" />
+         <TextField fx:id="ageField" layoutX="350.0" layoutY="80.0" />
+         <Button layoutX="300.0" layoutY="120.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="25.0" prefWidth="199.0" text="додати" />
+         <Button layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="25.0" prefWidth="199.0" text="видалити" />
+       </AnchorPane>
+   </center>
+</BorderPane>
